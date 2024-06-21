@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -12,12 +12,45 @@ header {
     color: #fff;
     text-align: center;
     padding: 2rem 0;
+    position: relative;
 }
 
 header img {
     width: 150px;
     height: 150px;
-    border-radius: 70%;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 75px);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    margin: 0;
+    padding-top: 120px;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header .button {
+    background: #fff;
+    color: #005f99;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+header .button:hover {
+    background: #e1e1e1;
 }
 
 nav ul {
@@ -38,29 +71,138 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     padding: 1rem;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: #005f99;
-    border-radius: 5px;
+    color: #005f99;
 }
 
-section {
+main {
     padding: 2rem 1rem;
     max-width: 800px;
     margin: auto;
-    background: #fff;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     margin-bottom: 1rem;
     color: #005f99;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #005f99;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 2px;
 }
 
 .proyecto, .experiencia {
     margin-bottom: 1.5rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover, .experiencia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto h3, .experiencia h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.proyecto p, .experiencia p {
+    margin: 0;
+}
+
+.proyecto .button, .experiencia .button {
+    display: inline-block;
+    background: #005f99;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.proyecto .button:hover, .experiencia .button:hover {
+    background: #004080;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    background: #005f99;
+    color: #fff;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: #004080;
+}
+
+form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border: 1px solid #005f99;
+    outline: none;
+}
+
+form button {
+    background: #005f99;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #004080;
 }
 
 footer {
@@ -68,4 +210,5 @@ footer {
     padding: 1rem 0;
     background: #005f99;
     color: #fff;
+    margin-top: 2rem;
 }
