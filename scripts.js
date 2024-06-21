@@ -8,4 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Efecto parallax en el header
+    window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY;
+        document.querySelector('header').style.backgroundPositionY = `${scrollPos * 0.5}px`;
+    });
 });
