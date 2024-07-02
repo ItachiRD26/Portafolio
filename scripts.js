@@ -1,17 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Animación de scroll suave
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Efecto parallax en el header
-    window.addEventListener('scroll', () => {
-        const scrollPos = window.scrollY;
-        document.querySelector('header').style.backgroundPositionY = `${scrollPos * 0.5}px`;
+document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
+        document.querySelector('nav').classList.toggle('dark-mode');
     });
 });
